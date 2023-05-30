@@ -1,0 +1,19 @@
+.labelForm{
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+}
+
+#formBooking{
+    border: solid thin blue;
+    /* width: 50%; */
+    margin-right: 200px;
+    background-color: #6699FF;
+    border-radius: 10px;
+    margin-left: 60%;
+}
+#background{
+    background-image: url("/image/mermaid.jpg");
+    height: 100%;
+
+}

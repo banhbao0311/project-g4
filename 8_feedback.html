@@ -1,0 +1,77 @@
+<div ng-controller="fbCtrl">
+  <form name="formFB">
+    <h3>Feedback Form</h3>
+    <h5>how do you rate your overall Experience</h5>
+    <div>
+      <input type="radio" name="" id="" />Bad
+      <input type="radio" name="" id="" />Average
+      <input type="radio" name="" id="" />Good
+      <table class="table-responsie">
+        <tr>
+          <th>*Full Name</th>
+          <th>*Email</th>
+        </tr>
+        <tr>
+          <td style="width: 500px">
+            <input
+              type="text"
+              name="fullName"
+              ng-model="fullName"
+              required
+              placeholder="Thanh Nhan"
+            /><span style="color: red" ng-show="formFB.fullName.$error.required"
+              >Full Name can't be blank
+            </span>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="email"
+              ng-model="email"
+              required
+              ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]+$/"
+              placeholder="nhan@gmail.com"
+            /><span style="color: red" ng-show="formFB.email.$error.required"
+              >Email can't be blank
+            </span>
+            <span style="color: red" ng-show="formFB.email.$error.pattern"
+              >Invalid Email
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th>*Age</th>
+          <th>*Phone</th>
+        </tr>
+        <tr>
+          <td><input type="number" min="1" /></td>
+          <td>
+            <input
+              type="text"
+              name="phone"
+              ng-pattern="/^\+\d{2}\s\d{1,9}$/"
+              ng-model="phone"
+              required
+              placeholder="+89 707437553"
+            /><span style="color: red" ng-show="formFB.phone.$error.required"
+              >Phone can't be blank
+            </span>
+            <span style="color: red" ng-show="formFB.phone.$error.pattern"
+              >Invalid Phone
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <th colspan="2">Message</th>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <textarea name="" id="" cols="100" rows="5"></textarea>
+          </td>
+        </tr>
+      </table>
+      <input type="submit" name="" id="" />
+      <input type="reset" name="" id="" />
+    </div>
+  </form>
+</div>
